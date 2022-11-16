@@ -1,0 +1,219 @@
+@use '../modules/colors';
+@use '../modules/typography';
+
+
+.container {
+    width: 100%;
+    height: 55rem;
+    background-color: colors.$white;
+    margin-top: 2rem;
+    border-radius: 1.5rem 1.5rem 0 0;
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        padding-top: 1.8rem;
+    }
+
+    &__input {
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        width: 90%;
+        height: 2.5rem;
+        background-color: colors.$very-light-gray-cyan;
+        border: none;
+        border-radius: 5px;
+        padding-right: 1rem;
+        text-align: right;
+        font-size: 1.3rem;
+        font-weight: typography.$fw-700;
+
+    }
+
+    &__label {
+        display: flex;
+        justify-content: flex-start;
+        padding-left: 1.2rem;
+        padding-bottom: .3rem;
+        font-weight: typography.$fw-700;
+        color: colors.$dark-cyan;
+    }
+
+    &__btns {
+        padding-top: 2rem;
+        padding-left: 1.2rem;
+    }
+
+    &__header {
+        font-size: .9rem;
+        font-weight: typography.$fw-700;
+        color: colors.$dark-cyan;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding-top: 1rem;
+        gap: .7rem 0rem;
+        margin: 0 auto;
+    }
+
+    &__btn {
+        width: 75%;
+        height: 3rem;
+        background: colors.$dark-cyan;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.5rem;
+        font-weight: typography.$fw-700;
+        color:colors.$white
+        
+    }
+    &__btn:active  {
+        background: colors.$dark-gray-cyan;
+    }
+    &__btn:hover {
+        cursor: pointer;
+    }
+
+    &__result {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-left: 1.2rem;
+        margin-top: 2rem;
+        background-color: colors.$dark-cyan;
+        width: 90%;
+        height: 16rem;
+        border-radius: 15px;
+    }
+
+    &__amount1 {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        padding-left: 1.4rem;
+        padding-top: 2rem;
+        position: relative;
+    }
+
+    &__amount2 {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        flex-direction: column;
+        padding-left: 1.4rem;
+        padding-top: 2rem;
+        position: relative;
+    }
+
+    &__paragraph {
+        color: colors.$white;
+        word-spacing: .4rem;
+    }
+
+    &__span {
+        display: block;
+        font-size: .8rem;
+        word-spacing: .4rem;
+        color: colors.$dark-gray-cyan;
+    }
+
+    &__numbers {
+        position: absolute;
+        left: 67%;
+        font-size: 1.8rem;
+        color: colors.$dark-gray-cyan;
+        font-weight: typography.$fw-700;
+    }
+
+    &__bottom {
+        position: relative;
+    }
+
+    &__reset {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 85%;
+        margin-left: 1.2rem;
+        margin-top: 2rem;
+        height: 2.5rem;
+        border: none;
+        background: colors.$dark-gray-cyan;
+        color: colors.$dark-cyan;
+        font-weight: typography.$fw-700;
+        font-size: .9rem;
+        border-radius: 5px;
+    }
+}
+
+.input {
+    text-align: right;
+    background: colors.$very-light-gray-cyan;
+    border: none;
+    padding-right: .5rem;
+    color: colors.$dark-cyan;
+    &:active {
+        background: colors.$very-light-gray-cyan;
+    }
+    &:hover {
+        cursor: auto;
+    }
+}
+
+@media only screen and (min-width:760px) {
+  .container {
+    height: 24.5rem;
+    width: 59rem;
+    border-radius: 1.5rem;
+    margin: 0 auto;
+    margin-top: 4rem;
+    position: relative;
+
+    &__input {
+        display: block;
+        margin-left: 1rem;
+        width: 29rem;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 10rem);
+        padding-top: 1rem; 
+    }
+
+    &__btn {
+        width: 9rem;
+        height: 3rem;
+    }
+
+    &__result {
+        width: 25rem;
+        height: 22rem;
+        position: absolute;
+        left: 31.5rem;
+        bottom: 1.2rem;
+    }
+
+    &__amount1 {
+        padding-bottom: 1rem;
+    }
+
+    &__amount2 {
+        padding-bottom: 10rem;
+    }
+
+
+    &__reset {
+        position: absolute;
+        left: .5rem;
+        bottom: 1rem;
+    }
+    
+    &__reset:hover {
+        cursor: pointer;
+    }
+  }  
+}

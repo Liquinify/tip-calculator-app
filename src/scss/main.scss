@@ -1,0 +1,22 @@
+@use 'partials/logo';
+@use 'partials/container';
+@use 'modules/colors';
+@use 'modules/typography';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow: auto;
+}
+
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: colors.$light-gray-cyan;
+    font-family: typography.$Space-Mono, sans-serif;
+}
